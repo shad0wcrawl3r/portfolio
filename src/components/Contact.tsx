@@ -24,7 +24,7 @@ export function Contact() {
             <div><span className="p">$</span> cat contacts.txt</div>
             <div className="out contact-row">
               <span className="gl">→</span>
-              <a href="https://github.com/ashwinbelbase" className="accent">github.com/shad0wcrawl3r</a>
+              <a href="https://github.com/shad0wcrawl3r" className="accent">github.com/shad0wcrawl3r</a>
             </div>
             <div className="out contact-row">
               <span className="gl">→</span>
