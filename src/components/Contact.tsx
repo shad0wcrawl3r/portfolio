@@ -1,15 +1,6 @@
-import { useState, type FormEvent } from 'react';
 import { SectionHeader } from './SectionHeader';
 
 export function Contact() {
-  const [sent, setSent] = useState(false);
-  const [email, setEmail] = useState('');
-  const [msg, setMsg] = useState('');
-
-  function submit(e: FormEvent) {
-    e.preventDefault();
-    setSent(true);
-  }
 
   return (
     <section className="kit-contact">
@@ -39,39 +30,6 @@ export function Contact() {
             <div><span className="p">$</span> <span className="cur" /></div>
           </div>
         </div>
-        <form className="contact-form" onSubmit={submit}>
-          <div className="field">
-            <label htmlFor="contact-email">// email</label>
-            <div className="wrap">
-              <span className="prefix">$</span>
-              <input
-                id="contact-email"
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="you@domain.com"
-                required
-              />
-            </div>
-          </div>
-          <div className="field">
-            <label htmlFor="contact-msg">// message</label>
-            <textarea
-              id="contact-msg"
-              value={msg}
-              onChange={(e) => setMsg(e.target.value)}
-              rows={3}
-              placeholder="drop a line. plaintext preferred."
-              required
-            />
-          </div>
-          <div className="actions">
-            <button type="submit" className="btn-primary">
-              <span>&gt;</span>&nbsp;send
-            </button>
-            {sent && <span className="sent">● sent — expect a reply within 48h</span>}
-          </div>
-        </form>
       </div>
     </section>
   );

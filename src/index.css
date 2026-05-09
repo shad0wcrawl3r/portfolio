@@ -348,7 +348,7 @@ html, body {
   .write-tag { color: var(--fg-2); font-size: 11px; letter-spacing: 0.1em; text-align: right; }
 
   /* ─── CONTACT ───────────────────────────────────── */
-  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; padding-bottom: 32px; }
+  .contact-grid { display: grid; grid-template-columns: 1fr; gap: 24px; padding-bottom: 32px; }
   .contact-term { border: 1px solid var(--border); background: var(--bg-1); }
   .contact-row { display: flex; align-items: center; gap: 10px; }
   .contact-row .ic { color: var(--fg-2); }
