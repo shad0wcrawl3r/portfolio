@@ -17,15 +17,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 24
-          cache: npm
-      - name: install dependencies
-        run: npm ci
+          cache: pnpm
+      - name: Install depedencies
+        run: pnpm install --frozen-lockfile
       - name: build project
-        run: npm run build
+        run: pnpm build
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
